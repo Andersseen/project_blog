@@ -1,0 +1,25 @@
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 1.1em 2.1em;
+
+    background-color: $secondary;
+    border: none;
+    cursor: pointer;
+    border-radius: 3rem;
+
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1.2rem;
+    line-height: 1.1;
+    font-weight: 500;
+    color: $white;
+
+    transition: background-color .2s linear;
+
+    box-shadow: 0 7px 17px -10px rgba($primary, .3);
+
+    &:hover {
+        background-color: darken($secondary, 5%);
+    }
+}
