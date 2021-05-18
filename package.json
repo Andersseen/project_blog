@@ -4,8 +4,8 @@
     "description": "my_gulp",
     "author": "andrii",
     "devDependencies": {
-        "@babel/core": "^7.14.0",
-        "@babel/preset-env": "^7.14.1",
+        "@babel/core": "^7.14.3",
+        "@babel/preset-env": "^7.14.2",
         "babel-core": "^6.26.3",
         "babel-loader": "^8.2.2",
         "babel-preset-env": "^1.7.0",
@@ -24,7 +24,7 @@
         "gulp-strip-css-comments": "^2.0.0",
         "gulp-uglify": "^3.0.2",
         "panini": "^1.7.1",
-        "webpack": "^5.36.2",
+        "webpack": "^5.37.0",
         "webpack-stream": "^6.1.2"
     },
     "browserslist": [
