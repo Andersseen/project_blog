@@ -19,6 +19,21 @@ body {
     box-sizing: border-box;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 /* Blocks  */
 @import "blocks/page";
 @import "blocks/header";
@@ -38,3 +53,7 @@ body {
 
 @import "blocks/embed";
 @import "blocks/pagination";
+
+@import "blocks/related";
+@import "blocks/comments";
+@import "blocks/form";
