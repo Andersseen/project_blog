@@ -54,7 +54,7 @@ html {
 
 body {
     font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    background-color: black;
+    background-color: #202020;
     font-size: 1.4rem;
     color: #fff;
     line-height: 1.5;
@@ -66,6 +66,14 @@ body {
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 /* Blocks  */
 .page {
     overflow: hidden;
@@ -75,7 +83,6 @@ body {
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
-    display: -ms-flexbox;
     display: flex;
     width: calc(100% - 300px);
     background-color: #111;
@@ -94,9 +101,7 @@ body {
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: end;
     justify-content: flex-end;
 }
 
@@ -104,7 +109,6 @@ body {
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
-    display: -ms-flexbox;
     display: flex;
 }
 
@@ -114,6 +118,7 @@ body {
 
 .nav__item:hover .nav__link {
     background-color: darkslateblue;
+    text-decoration: none;
 }
 
 .nav__item:hover > .subnav {
@@ -145,7 +150,6 @@ body {
     position: absolute;
     top: 50%;
     right: 1.4rem;
-    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
@@ -174,6 +178,7 @@ body {
 .subnav__link:hover {
     border-bottom: 1px solid aliceblue;
     background-color: #3f3579;
+    text-decoration: none;
 }
 
 .search {
@@ -247,16 +252,13 @@ body {
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0 2px;
 }
 
 .main {
-    padding-left: 300px;
-    padding-top: 10rem;
+    padding: 10rem 0 8rem 300px;
 }
 
 .container {
@@ -302,22 +304,17 @@ body {
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: center;
     justify-content: center;
     margin-top: 1rem;
 }
 
 .social__item {
     margin: 0 1rem;
-    transition: -webkit-transform .2s linear;
     transition: transform .2s linear;
-    transition: transform .2s linear, -webkit-transform .2s linear;
 }
 
 .social__item:hover {
-    -webkit-transform: rotate(30deg);
     transform: rotate(30deg);
 }
 
@@ -360,9 +357,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: -webkit-transform .2s ease-out;
     transition: transform .2s ease-out;
-    transition: transform .2s ease-out, -webkit-transform .2s ease-out;
 }
 
 .stories__item:after {
@@ -378,7 +373,6 @@ body {
 }
 
 .stories__item:hover {
-    -webkit-transform: scale(1.1) translate(0, -5%);
     transform: scale(1.1) translate(0, -5%);
 }
 
@@ -404,4 +398,318 @@ body {
     top: 0;
     left: 0;
     z-index: 3;
+}
+.post {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+    background-color: #202020;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+}
+
+.post__header {
+    margin: 0 0 2.5rem;
+}
+
+.post__header--preview {
+    margin: -2.5rem -2.5rem 2.5rem;
+}
+
+.post_preview {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.post__content {
+    margin-bottom: 2rem;
+}
+
+.post__title {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: aliceblue;
+    font-weight: 500;
+}
+
+.post__title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.post__title a:hover {
+    text-decoration: underline;
+}
+
+.post__title--mb0 {
+    margin-bottom: 0;
+}
+
+.post__description {
+    font-size: 1.4rem;
+    color: #d2d2d2;
+}
+
+.post__text {
+    padding-bottom: 1rem;
+    font-size: 1.6rem;
+    color: azure;
+}
+
+.post__text h2,
+  .post__text h3,
+  .post__text h4,
+  .post__text h5,
+  .post__text h6 {
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.post__text h2 {
+    font-size: 2em;
+}
+
+.post__text h3 {
+    font-size: 1.25em;
+}
+
+.post__text h4 {
+    font-size: 1.15em;
+}
+
+.post__text h5,
+  .post__text h6 {
+    font-size: 1em;
+}
+
+.post__text p {
+    margin-bottom: 2rem;
+}
+
+.post__text a {
+    color: slateblue;
+}
+
+.post__footer {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post__data {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    color: #828282;
+    line-height: 1.2;
+}
+
+.post__data a {
+    color: #828282;
+    text-decoration: none;
+}
+
+.post__data a:hover {
+    text-decoration: underline;
+}
+
+.post__data-item:not(:last-child):after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 1.5rem;
+    position: relative;
+    top: -2px;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+}
+
+.post__read {
+    font-size: 1.4rem;
+    color: slateblue;
+    text-decoration: none;
+}
+
+.post__read:hover {
+    text-decoration: underline;
+}
+
+.post__actions {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-style: 1.2rem;
+    color: azure;
+}
+
+.post__actions a {
+    color: inherit;
+    opacity: .6;
+    transition: opacity .2s linear;
+}
+
+.post__actions a:hover {
+    opacity: 1;
+}
+
+.post__actions-icon {
+    margin-left: .5rem;
+}
+
+.embed {
+    position: relative;
+    overflow: hidden;
+}
+
+.embed:before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+}
+
+.embed iframe,
+  .embed video,
+  .embed embed,
+  .embed object {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.pagination {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+}
+
+.pagination__item {
+    margin: 0.5rem;
+}
+
+.pagination__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #0d0d0d;
+    border-radius: 3px;
+    line-height: 4rem;
+    font-size: 1.4rem;
+    color: aliceblue;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .2s linear;
+}
+
+.pagination__link:hover {
+    background-color: #1a1a1a;
+}
+
+.pagination__link.active {
+    background-color: slateblue;
+    box-shadow: 0 0 10px rgba(106, 90, 205, 0.15);
+}
+
+.related {
+    padding: 3rem 0;
+    border-bottom: 1px solid #1c1c1c;
+}
+
+.related__title {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    color: azure;
+    font-weight: 500;
+}
+
+.related__list {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.related__list-item {
+    width: 50%;
+    margin-bottom: 2.5rem;
+}
+
+.related__list-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #f3eba2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.related__list-title a {
+    color: inherit;
+}
+
+.comments {
+    margin-top: 3rem;
+}
+
+.comments__title {
+    color: azure;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.form__group {
+    margin-bottom: 1.5rem;
+}
+
+.form__control {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #3f3f3f;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: inherit;
+    font-size: 1.4rem;
+    color: azure;
+}
+
+.form__control::-webkit-input-placeholder {
+    color: rgba(240, 255, 255, 0.2);
+}
+
+.form__control::-moz-placeholder {
+    color: rgba(240, 255, 255, 0.2);
+}
+
+.form__control:-ms-input-placeholder {
+    color: rgba(240, 255, 255, 0.2);
+}
+
+.form__control::-ms-input-placeholder {
+    color: rgba(240, 255, 255, 0.2);
+}
+
+.form__control::placeholder {
+    color: rgba(240, 255, 255, 0.2);
+}
+
+.form__control--textarea {
+    resize: none;
 }
